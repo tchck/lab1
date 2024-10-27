@@ -90,3 +90,39 @@ int main()
                 }
                 break;
             }
+            case 2: {
+                int index;
+                cout << "Enter animal index:\n";
+                cin >> index;
+                keeper.remove(index);
+                break;
+            }
+            case 3: {
+                keeper.print();
+                break;
+            }
+            case 4: {
+                keeper.save("output.txt");
+                break;
+            }
+            case 5: {
+                keeper.load("output.txt");
+                break;
+            }
+            case 6: {
+                cout << "Goodbye!\n";
+                return 0;
+            }
+            default: {
+                cout << "Invalid choice\n";
+                break;
+            }
+            }
+        }
+        catch (Exception error)
+        {
+            cout << error;
+        }
+    }
+}
+
