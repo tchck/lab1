@@ -26,11 +26,11 @@ Cat::~Cat()
 	std::cout << "Cat default destructor called\n";
 }
 void Cat::print() {
-	std::cout << "Cat: " << "\n";
+	std::cout << "Кошка: " << "\n";
 	std::cout << species << " " << color << " " << owner << " " << name << "\n";
 }
 std::string Cat::getParam() {
 	std::string parameters;
-	parameters = "Cat " + species + " " + color + " " + owner + " " + name;
+	parameters = "Кошка " + species + " " + color + " " + owner + " " + name;
 	return parameters;
 }

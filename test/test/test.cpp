@@ -24,7 +24,7 @@ int main()
     {
         showMenu();
         int choice;
-        cout << "\nEnter your choice:\n";
+        cout << "\nВыберите:\n";
         cin >> choice;
         try {
             switch (choice) {
@@ -112,7 +112,6 @@ int main()
                 break;
             }
             case 6: {
-                cout << "Goodbye!\n";
                 return 0;
             }
             default: {

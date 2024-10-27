@@ -26,12 +26,12 @@ Bird::~Bird()
 	std::cout << "Bird default destructor called\n";
 }
 void Bird::print() {
-	std::cout << "Bird: " << "\n";
+	std::cout << "ѕтица: " << "\n";
 	std::cout << species << " " << color << " " <<
 		food << " " << area << " " << "\n";
 }
 std::string Bird::getParam() {
 	std::string parameters;
-	parameters = "Bird " + species + " " + color + " " + food + " " + area;
+	parameters = "ѕтица " + species + " " + color + " " + food + " " + area;
 	return parameters;
 }

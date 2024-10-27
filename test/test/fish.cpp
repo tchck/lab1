@@ -23,11 +23,11 @@ Fish::~Fish()
 	std::cout << "Fish default destructor called\n";
 }
 void Fish::print() {
-	std::cout << "Fish instrument: " << "\n";
+	std::cout << "аћср: " << "\n";
 	std::cout << species << " " << color << " " << foodType << " " << "\n";
 }
 std::string Fish::getParam() {
 	std::string parameters;
-	parameters = "Fish" + species + " " + color + " " + foodType;
+	parameters = "аћср" + species + " " + color + " " + foodType;
 	return parameters;
 }
