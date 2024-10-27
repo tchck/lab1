@@ -30,3 +30,63 @@ int main()
                 int instrument;
                 cout << "\nEnter animal type\n"
                     "1. Cat 2. Bird 3. Fish:\n";
+                cin >> instrument;
+                switch (instrument) {
+                case 1: {
+                    string species;
+                    string color;
+                    string owner;
+                    string name;
+                    Cat* ca;
+                    cout << "Enter cat species:\n";
+                    cin >> species;
+                    cout << "Enter cat color:\n";
+                    cin >> color;
+                    cout << "Enter cat owner:\n";
+                    cin >> owner;
+                    cout << "Enter cat name:\n";
+                    cin >> name;
+                    ca = new Cat(species, color, owner, name);
+                    keeper.add(ca);
+                    break;
+                }
+                case 2: {
+                    string species;
+                    string color;
+                    string food;
+                    string area;
+                    Bird* bir;
+                    cout << "Enter bird species:\n";
+                    cin >> species;
+                    cout << "Enter bird color:\n";
+                    cin >> color;
+                    cout << "Enter bird food:\n";
+                    cin >> food;
+                    cout << "Enter bird text area:\n";
+                    cin >> area;
+                    bir = new Bird(species, color, food, area);
+                    keeper.add(bir);
+                    break;
+                }
+                case 3: {
+                    string species;
+                    string color;
+                    string food;
+                    Fish* fish;
+                    cout << "Enter fish species:\n";
+                    cin >> species;
+                    cout << "Enter fish color:\n";
+                    cin >> color;
+                    cout << "Enter fish food:\n";
+                    cin >> food;
+                    fish = new Fish(species, color, food);
+                    keeper.add(fish);
+                    break;
+                }
+                default: {
+                    cout << "Invalid type\n";
+                    break;
+                }
+                }
+                break;
+            }
