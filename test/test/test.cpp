@@ -5,18 +5,20 @@
 #include "bird.h"
 #include "fish.h"
 using namespace std;
+
 void showMenu()
 {
-    std::cout << "\nMenu:\n"
-        "1. Add animal\n"
-        "2. Remove animal\n"
-        "3. Print animal\n"
-        "4. Save to File\n"
-        "5. Restore from File\n"
-        "6. Exit\n";
+    std::cout << "\nМеню:\n"
+        "1. Добавить животное\n"
+        "2. Удалить животное\n"
+        "3. Вывести животное на экран\n"
+        "4. Сохранить в файл\n"
+        "5. Загрузить из файла\n"
+        "6. Выход\n";
 }
 int main()
 {
+    setlocale(LC_ALL, "Russian");
     Keeper keeper;
     while (true)
     {
@@ -28,8 +30,8 @@ int main()
             switch (choice) {
             case 1: {
                 int instrument;
-                cout << "\nEnter animal type\n"
-                    "1. Cat 2. Bird 3. Fish:\n";
+                cout << "\nВыберите тип животного\n"
+                    "1. Кошка \n2. Птица \n3. Рыба:\n";
                 cin >> instrument;
                 switch (instrument) {
                 case 1: {
@@ -38,13 +40,13 @@ int main()
                     string owner;
                     string name;
                     Cat* ca;
-                    cout << "Enter cat species:\n";
+                    cout << "Введите породу кошки:\n";
                     cin >> species;
-                    cout << "Enter cat color:\n";
+                    cout << "Введите окрас кошки:\n";
                     cin >> color;
-                    cout << "Enter cat owner:\n";
+                    cout << "Введите ФИО владельца кошки:\n";
                     cin >> owner;
-                    cout << "Enter cat name:\n";
+                    cout << "Введите кличку кошки:\n";
                     cin >> name;
                     ca = new Cat(species, color, owner, name);
                     keeper.add(ca);
@@ -56,13 +58,13 @@ int main()
                     string food;
                     string area;
                     Bird* bir;
-                    cout << "Enter bird species:\n";
+                    cout << "Введите породу птицы:\n";
                     cin >> species;
-                    cout << "Enter bird color:\n";
+                    cout << "Введите окрас птицы:\n";
                     cin >> color;
-                    cout << "Enter bird food:\n";
+                    cout << "Введите, чем птица питается:\n";
                     cin >> food;
-                    cout << "Enter bird text area:\n";
+                    cout << "Введите, где птица обитает:\n";
                     cin >> area;
                     bir = new Bird(species, color, food, area);
                     keeper.add(bir);
@@ -73,11 +75,11 @@ int main()
                     string color;
                     string food;
                     Fish* fish;
-                    cout << "Enter fish species:\n";
+                    cout << "Введите породу рыбы:\n";
                     cin >> species;
-                    cout << "Enter fish color:\n";
+                    cout << "Введите окрас рыбы:\n";
                     cin >> color;
-                    cout << "Enter fish food:\n";
+                    cout << "Введите тип питания рыбы:\n";
                     cin >> food;
                     fish = new Fish(species, color, food);
                     keeper.add(fish);
@@ -92,7 +94,7 @@ int main()
             }
             case 2: {
                 int index;
-                cout << "Enter animal index:\n";
+                cout << "Введите номер животного:\n";
                 cin >> index;
                 keeper.remove(index);
                 break;
@@ -106,7 +108,7 @@ int main()
                 break;
             }
             case 5: {
-                keeper.load("output.txt");
+                keeper.load("input.txt");
                 break;
             }
             case 6: {

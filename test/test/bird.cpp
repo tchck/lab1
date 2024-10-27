@@ -8,7 +8,7 @@ Bird::Bird(std::string species, std::string color, std::string
 	this->color = color;
 	this->food = food;
 	this->area = area;
-	std::cout << "String default constructor called\n";
+	std::cout << "Bird default constructor called\n";
 }
 Bird::Bird(std::string parameters)
 {
@@ -32,6 +32,6 @@ void Bird::print() {
 }
 std::string Bird::getParam() {
 	std::string parameters;
-	parameters = "String " + species + " " + color + " " + food + " " + area;
+	parameters = "Bird " + species + " " + color + " " + food + " " + area;
 	return parameters;
 }
